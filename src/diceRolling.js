@@ -1,10 +1,27 @@
 
 
+
+/**
+ * Generate a random number between 1 and a given size
+ *
+ * @param {number} [diceSize=6] number representing the size of the dice
+ * @returns {*} A random number between 1 and a given size
+ */
+
 function rollDice(diceSize = 6) {
     let rollResult = Math.floor(Math.random() * diceSize) + 1
 
     return rollResult;
 }
+
+
+
+/**
+ * Generate a random number between 1 and a given size twice, and identifying the highest number
+ *
+ * @param {number} [diceSize=6]
+ * @returns {{ finalResult: any; rolls: {}; }} A random number between 1 and a given size twice, and identifying the highest number
+ */
 
 function rollDiceWithAdvantage(diceSize = 6) {
     let result = {
@@ -21,6 +38,14 @@ function rollDiceWithAdvantage(diceSize = 6) {
 
     return result;
 }
+
+/**
+ * Generate a random number between 1 and a given size twice, and identifying the smallest number
+ *
+ * @param {number} [diceSize=6]
+ * @returns {{ finalResult: any; rolls: {}; }} A random number between 1 and a given size twice, and identifying the smallest number
+ */
+
 
     function rollDiceWithDisadvantage(diceSize = 6) {
         let result = {
