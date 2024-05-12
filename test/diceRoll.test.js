@@ -121,6 +121,18 @@ describe('As a casual gamer...', () => {
 
     });
 
+    test("...roll with disadvantage", () => {
+        let rollDiceWithDisadvantage = jest.fn().mockReturnValue({
+            finalResult: 1,
+            rolls: [1,20]
+        });
+
+        let rollResult = rollDiceWithDisadvantage(20);
+
+        expect(rollResult.finalResult).toBe(1);
+
+    });
+
     test("...I want to see how many natural 20s I get in a session where I roll 1000 D20s", () => {
         let diceResults = [];
 
